@@ -6,3 +6,4 @@
   delegate_to: "{{ rabbitmq_master }}"
   become: true
   when: rabbitmq_plugins
+  notify: restart rabbitmq-server
