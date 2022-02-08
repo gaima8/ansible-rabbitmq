@@ -1,0 +1,8 @@
+---
+- name: conf | Configuring RabbitMQ (sysctl or ini-like)
+  template:
+    src: "{{ rabbitmq_conf_file }}"
+    dest: "/etc/rabbitmq/rabbitmq.conf"
+    mode: u=rw,g=r,o=r
+  become: true
+  notify: "restart rabbitmq-server"

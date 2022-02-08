@@ -26,6 +26,10 @@ rabbitmq_config_file: etc/rabbitmq/rabbitmq.config.j2
 rabbitmq_config_env_file: etc/rabbitmq/rabbitmq-env.conf.j2
 rabbitmq_env_config: {}
 
+rabbitmq_conf_service: false
+rabbitmq_conf_file: etc/rabbitmq/rabbitmq.conf.j2
+rabbitmq_conf: {}
+
 # rabbitmq_debian_repo: deb http://www.rabbitmq.com/debian/ testing main
 #other repos
 rabbitmq_debian_repo: "deb https://dl.cloudsmith.io/public/rabbitmq/rabbitmq-server/deb/debian {{ ansible_distribution_release }} main"
